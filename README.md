@@ -1,1 +1,1 @@
-# data_science-disha
+# data-science-disha
