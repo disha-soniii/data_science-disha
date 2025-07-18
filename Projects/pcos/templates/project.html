@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Predictor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">PCOS Predictor</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="/project">Project</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h2 class="text-center">PCOS Risk Prediction</h2>
+    <form action="{{ url_for('predict') }}" method="post">
+        <div class="form-group">
+            <label>Age:</label>
+            <input type="number" class="form-control" name="age" required>
+        </div>
+
+        <div class="form-group">
+            <label>Weight (kg):</label>
+            <input type="number" class="form-control" name="weight" required>
+        </div>
+
+        <div class="form-group">
+            <label>Height (ft):</label>
+            <input type="number" class="form-control" name="height" required>
+        </div>
+
+        <div class="form-group">
+            <label>Family History of PCOS (0-No, 1-Yes):</label>
+            <input type="number" class="form-control" name="family_history" required>
+        </div>
+
+        <div class="form-group">
+            <label>Menstrual Irregularity (0/1):</label>
+            <input type="number" class="form-control" name="menstrual_irregularity" required>
+        </div>
+
+        <div class="form-group">
+            <label>Hormonal Imbalance (0/1):</label>
+            <input type="number" class="form-control" name="hormonal_imbalance" required>
+        </div>
+
+        <div class="form-group">
+            <label>Hyperandrogenism (0/1):</label>
+            <input type="number" class="form-control" name="hyperandrogenism" required>
+        </div>
+
+        <div class="form-group">
+            <label>Hirsutism (0/1):</label>
+            <input type="number" class="form-control" name="hirsutism" required>
+        </div>
+
+        <div class="form-group">
+            <label>Mental Health Issues (0/1):</label>
+            <input type="number" class="form-control" name="mental_health" required>
+        </div>
+
+        <div class="form-group">
+            <label>Insulin Resistance (0/1):</label>
+            <input type="number" class="form-control" name="insulin_resistance" required>
+        </div>
+
+        <div class="form-group">
+            <label>Diabetes (0/1):</label>
+            <input type="number" class="form-control" name="diabetes" required>
+        </div>
+
+        <div class="form-group">
+            <label>Exercise Frequency (0-No, 1-Sometimes, 2-Regular):</label>
+            <input type="number" class="form-control" name="exercise_frequency" required>
+        </div>
+
+        <div class="form-group">
+            <label>Exercise Type (0-None, 1-Cardio, 2-Strength, 3-Yoga):</label>
+            <input type="number" class="form-control" name="exercise_type" required>
+        </div>
+
+        <div class="form-group">
+            <label>Exercise Duration (minutes):</label>
+            <input type="number" class="form-control" name="exercise_duration" required>
+        </div>
+
+        <div class="form-group">
+            <label>Sleep Hours (per day):</label>
+            <input type="number" class="form-control" name="sleep_hours" required>
+        </div>
+
+        <div class="form-group">
+            <label>Stress Level (0-Low, 1-Medium, 2-High):</label>
+            <input type="number" class="form-control" name="stress_level" required>
+        </div>
+
+        <div class="form-group">
+            <label>Smoking (0-No, 1-Yes):</label>
+            <input type="number" class="form-control" name="smoking" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Predict Risk</button>
+    </form>
+</div>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    &copy; 2025 PCOS Predictor. All rights reserved.
+</footer>
+
+</body>
+</html>

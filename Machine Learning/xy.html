@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Price Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+   
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+main {
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.description {
+    text-align: center;
+}
+
+.form-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.form-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #3e8e41;
+}
+
+.disclaimer {
+    font-size: 0
+}
+.Prediction{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+}
+</style>
+<body>
+    <header>
+        <h1>Laptop Price Prediction</h1>
+    </header>
+    <main>
+        <section class="description">
+            <h2>Welcome to the Laptop Price Prediction Tool!</h2>
+            <p>This website helps you estimate the value of laptops based on various factors.</p>
+        </section>
+        <section class="form-container">
+            <h3>Enter laptop Details</h3>
+<form action="{{ url_for('predict') }}" method="post">
+            
+                <label for="brand">Brand:</label>
+                <select name="brand_name" id="fifth" required="required">
+
+                        <option value="ASUS">ASUS</option>
+                        <option value="Lenovo">Lenovo</option>
+                        <option value="acer">acer</option>
+                        <option value="Avita">Avita</option>
+                        <option value="HP">HP</option>
+                        <option value="DELL">DELL</option>
+                        <option value="MSI">MSI</option>
+                        <option value="APPLE">APPLE</option>
+        </select><br><br>
+                
+                
+
+    {# brand,processor_brand,processor_name,processor_gnrtn,ram_gb,ram_type,ssd,hdd,os,os_bit,graphic_card_gb,warranty,Touchscreen,msoffice #}
+                
+                <label for="processor_brand">processor_brand:</label>
+                <select name="processor_brand" id="fifth" required="required">
+                <option value="1">Intel</option>
+                <option value="2">AMD</option>
+                <option value="3">M1</option>
+                <br><br>
+                
+                <label for="processor_name">processor_name:</label>
+                <select name="processor_name" id="fifth" required="required">
+                <option value="1">Celeron Dual</option>
+                <option value="2">Core i3</option>
+                <option value="3">Core i5</option>
+                <option value="4">Core i7</option>
+                <option value="5">Core i9</option>
+                <option value="6">M1</option>
+                <option value="7">Pentium Quad</option>
+                <option value="8">Ryzen 3</option>
+                <option value="9">Ryzen 5</option>
+                <option value="10">Ryzen 7</option>
+                <option value="11">Ryzen 9</option>
+                <br><br>
+
+                <label for="processor_gnrtn">processor_gnrtn</label>
+                <select name="processor_gnrtn" id="fifth" required="required">
+                <option value="1">4th</option>
+                <option value="2">7th</option>
+                <option value="3">8th</option>
+                <option value="4">9th</option>
+                <option value="5">10th</option>
+                <option value="6">11th</option>
+                <option value="7">12th</option>
+                <option value="8">Not Available</option>
+                <br><br>
+
+                <label for="ram_gb">ram_gb</label>
+                <select name="ram_gb" id="fifth" required="required">
+                <option value="1">4 GB</option>
+                <option value="2">8 GB</option>
+                <option value="3">16 GB</option>
+                <option value="4">32 GB</option>
+                <br><br>
+
+                <label for="ram_type">ramtype</label>
+                <select name="ram_type" id="fifth" required="required">
+                <option value="1">DDR3</option>
+                <option value="2">DDR4</option>
+                <option value="3">DDR5</option>
+                <option value="4">LPDDR3</option>
+                <option value="5">LPDDR4</option>
+                <option value="4">LPDDR4X</option>
+                <br><br>
+
+                <label for="ssd">ssd</label>
+                <select name="ssd" id="fifth" required="required">
+                <option value="1">0 GB</option>
+                <option value="2">128 GB</option>
+                <option value="3">256 GB</option>
+                <option value="4">512 GB</option>
+                <option value="5">1024 GB</option>
+                <option value="6">2048 GB</option>
+                <option value="7">3072 GB</option>
+                <br><br>
+
+                <label for="hdd">hdd</label>
+                <select name="hdd" id="fifth" required="required">
+                <option value="1">0 GB</option>
+                <option value="1">512 GB</option>
+                <option value="1">1024 GB</option>
+                <option value="1">2048 GB</option>
+                <br><br>
+
+                <label for="os">os</label>
+                <select name="os" id="fifth" required="required">
+                <option value="1">Windows</option>
+                <option value="2">DOS</option>
+                <option value="3">Mac</option>
+                <br><br>
+
+                <label for="os_bit">os_bit</label>
+                <select name="os_bit" id="fifth" required="required">
+                <option value="1">32 bit</option>
+                <option value="2">64 bit</option>
+                <br><br>
+
+                <label for="graphic_card_gb">graphic_card_gb</label>
+                <select name="graphic_card_gb" id="fifth" required="required">
+                <option value="1">0 GB</option>
+                <option value="2">2 GB</option>
+                <option value="3">4 GB</option>
+                <option value="4">6 GB</option>
+                <option value="5">8 GB</option>
+                <br><br>
+
+                <label for="warranty">warranty</label>
+                <select name="warranty" id="fifth" required="required">
+                <option value="1">No warranty</option>
+                <option value="2">1 year</option>
+                <option value="3">2 years</option>
+                <option value="4">3 years</option>
+                <br><br>
+
+                <label for="Touchscreen">Touchscreen</label>
+                <input type="text" name ="Touchscreen"required>
+                <br><br>
+
+                <label for="msoffice">msoffice</label>
+                <input type="text" name ="msoffice"required>
+                <br><br>
+                </select>
+                
+                <button type="submit">Predict Price</button>
+            </form>
+            <!-- <p class="disclaimer">**Disclaimer:** This is a basic website for demonstration purposes only. A real prediction model would require additional features and machine learning integration.</p>
+        </section> -->
+        <!-- <section class="results">
+            <h2>Predicted Price</h2>
+            <p id="predicted-price">**This is where the predicted price will be displayed.**</p>
+        </section> -->
+    </main>
+    <div class="Prediction">
+    <h2>Laptop Price is : {{ prediction }}</h2>
+</div>
+    <footer>
+        <!-- <p>&copy;2024 Bike Price Prediction</p> -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCOS Predictor Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("{{ url_for('static', filename='pcos.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        section {
+            margin: 40px auto;
+            max-width: 800px;
+            background-color: rgba(0,0,0,0.6);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .buttonGroup {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 30px;
+        }
+
+        .buttonGroup a button {
+            font-size: 18px;
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .buttonGroup a button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the PCOS Prediction Tool</h1>
+</header>
+
+<section>
+    <h2>About Project</h2>
+    <p>
+        PCOS Predictor is a health risk assessment tool using machine learning that predicts the possibility of PCOS (Polycystic Ovary Syndrome) based on key health and lifestyle factors.
+    </p>
+
+    <div class="buttonGroup">
+        <a href="/project"><button>Start Prediction</button></a>
+        <a href="/about"><button>About Us</button></a>
+        <a href="/contact"><button>Contact</button></a>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 PCOS Predictor. All rights reserved.
+</footer>
+
+</body>
+</html>

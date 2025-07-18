@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+</head>
+<body>
+    <h1>Historical Predictions</h1>
+
+    <table border="1">
+        <tr>
+            <th>Predicted Price</th>
+            <th>Brand</th>
+            <th>Processor Brand</th>
+            <th>Processor Name</th>
+            <th>Processor Gen</th>
+            <th>RAM (GB)</th>
+            <th>RAM Type</th>
+            <th>SSD</th>
+            <th>HDD</th>
+            <th>OS</th>
+            <th>OS Bit</th>
+            <th>Graphic Card (GB)</th>
+            <th>Warranty</th>
+            <th>Touchscreen</th>
+            <th>MS Office</th>
+        </tr>
+
+        {% for prediction in historical_data %}
+        <tr>
+            {% for item in prediction %}
+            <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
