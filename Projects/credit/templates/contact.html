@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Credit Approval Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="main-container">
+            <div class="d-flex justify-content-center align-items-center">
+                <a href="/" class="navbar-brand">
+                    <i class="fas fa-chart-line"></i> Credit Predictor
+                </a>
+                <div class="d-flex gap-3" style="margin-left: auto;">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/project" class="nav-link">Predict</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Hero Section -->
+        <div class="hero-section text-center animate-fade-in">
+            <h1 class="hero-title">Get in Touch</h1>
+            <p class="hero-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="features-grid animate-fade-in">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3 class="feature-title">Email Us</h3>
+                <p class="feature-description">dishasoniii974@gmail.com</p>
+                <p class="feature-description">We typically respond within 24 hours</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3 class="feature-title">Call Us</h3>
+                <p class="feature-description">+91 8529586061</p>
+                <p class="feature-description">Monday - Friday, 9AM - 6PM EST</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="card animate-fade-in">
+            <h2 class="text-center mb-4"><i class="fas fa-paper-plane"></i> Send Us a Message</h2>
+            <form class="form-container">
+                <div class="d-flex gap-3" style="flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <div class="form-group">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your first name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your last name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 300px;">
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <select class="form-control" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="Enter your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Company</label>
+                            <input type="text" class="form-control" placeholder="Enter your company name">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" rows="5" placeholder="Tell us how we can help you..." required></textarea>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="card animate-fade-in">
+            <h2 class="text-center mb-4"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+            <div class="d-flex gap-3" style="flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h4><i class="fas fa-shield-alt"></i> Is my data secure?</h4>
+                    <p>Yes, absolutely! We use enterprise-grade encryption and never store your personal information. Your data is only used for the current prediction and is immediately discarded.</p>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h4><i class="fas fa-chart-line"></i> How accurate are the predictions?</h4>
+                    <p>Our model has been trained on extensive credit data and achieves high accuracy rates. However, predictions are estimates and should not be considered as final credit decisions.</p>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h4><i class="fas fa-clock"></i> How long does it take to get results?</h4>
+                    <p>Results are generated instantly! Our AI processes your information in seconds and provides immediate predictions.</p>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h4><i class="fas fa-mobile-alt"></i> Can I use this on mobile?</h4>
+                    <p>Yes! Our platform is fully responsive and works perfectly on all devices including smartphones and tablets.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="card text-center animate-fade-in">
+            <h2 class="mb-4"><i class="fas fa-share-alt"></i> Follow Me</h2>
+            <p class="mb-4">Connect with me on professional networks</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://www.linkedin.com/in/disha-soni-73aa48257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn" style="background: #0077b5; color: white;" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/disha-soniii" class="btn" style="background: #333; color: white;" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="main-container">
+            <p>&copy; 2025 Credit Approval Predictor. All rights reserved.</p>
+            <p>Powered by Advanced Machine Learning</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form validation and enhancement
+            const form = document.querySelector('form');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitBtn.innerHTML = '<span class="loading"></span> Sending...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    alert('Thank you for your message! We\'ll get back to you soon.');
+                    form.reset();
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    submitBtn.disabled = false;
+                }, 2000);
+            });
+
+            // Add input validation
+            const inputs = form.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    if (this.checkValidity()) {
+                        this.style.borderColor = '#10b981';
+                    } else {
+                        this.style.borderColor = '#ef4444';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

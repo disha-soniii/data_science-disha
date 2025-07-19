@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result - Credit Approval Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="main-container">
+            <div class="d-flex justify-content-center align-items-center">
+                <a href="/" class="navbar-brand">
+                    <i class="fas fa-chart-line"></i> Credit Predictor
+                </a>
+                <div class="d-flex gap-3" style="margin-left: auto;">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/project" class="nav-link">Predict</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="result-container animate-fade-in">
+            <div class="result-card">
+                {% if "Approved" in prediction %}
+                    <div class="result-icon result-approved">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2 class="result-text result-approved">{{ prediction }}</h2>
+                    <p class="mb-4">Congratulations! Your credit application has been approved. You meet the criteria for credit approval.</p>
+                    
+                    <div class="card mb-4">
+                        <h4><i class="fas fa-lightbulb"></i> What This Means</h4>
+                        <ul style="text-align: left; margin: 1rem 0;">
+                            <li>Your financial profile is strong</li>
+                            <li>You have a good credit history</li>
+                            <li>Your income and expenses are well-balanced</li>
+                            <li>You're likely to receive favorable terms</li>
+                        </ul>
+                    </div>
+                {% else %}
+                    <div class="result-icon result-rejected">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <h2 class="result-text result-rejected">{{ prediction }}</h2>
+                    <p class="mb-4">We're sorry, but your credit application was not approved at this time.</p>
+                    
+                    <div class="card mb-4">
+                        <h4><i class="fas fa-info-circle"></i> Possible Reasons</h4>
+                        <ul style="text-align: left; margin: 1rem 0;">
+                            <li>Insufficient income or employment history</li>
+                            <li>High debt-to-income ratio</li>
+                            <li>Limited credit history</li>
+                            <li>Recent negative credit events</li>
+                        </ul>
+                    </div>
+                {% endif %}
+
+                <div class="d-flex justify-content-center gap-3" style="flex-wrap: wrap;">
+                    <a href="/project" class="btn btn-primary">
+                        <i class="fas fa-redo"></i> Try Another Prediction
+                    </a>
+                    <a href="/" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">
+                        <i class="fas fa-home"></i> Back to Home
+                    </a>
+                </div>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="features-grid animate-fade-in" style="margin-top: 3rem;">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="feature-title">AI Analysis</h3>
+                    <p class="feature-description">Our machine learning model analyzed multiple factors including age, job, education, balance, and more to reach this prediction.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Data Privacy</h3>
+                    <p class="feature-description">Your personal information is not stored and is only used for this prediction. We prioritize your privacy.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="feature-title">Instant Results</h3>
+                    <p class="feature-description">This prediction was generated in real-time using our advanced AI algorithms trained on extensive credit data.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="main-container">
+            <p>&copy; 2025 Credit Approval Predictor. All rights reserved.</p>
+            <p>Powered by Advanced Machine Learning</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add celebration animation for approved results
+            {% if "Approved" in prediction %}
+            const resultIcon = document.querySelector('.result-icon');
+            resultIcon.style.animation = 'bounce 1s ease-in-out';
+            
+            // Add confetti effect
+            function createConfetti() {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '-10px';
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.backgroundColor = ['#10b981', '#3b82f6', '#f59e0b', '#ef4444'][Math.floor(Math.random() * 4)];
+                confetti.style.borderRadius = '50%';
+                confetti.style.animation = 'fall 3s linear forwards';
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, 3000);
+            }
+            
+            for(let i = 0; i < 50; i++) {
+                setTimeout(createConfetti, i * 100);
+            }
+            {% endif %}
+        });
+    </script>
+
+    <style>
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+        
+        @keyframes fall {
+            to { transform: translateY(100vh) rotate(360deg); }
+        }
+    </style>
+</body>
+</html>

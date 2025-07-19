@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Credit Approval Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="main-container">
+            <div class="d-flex justify-content-center align-items-center">
+                <a href="/" class="navbar-brand">
+                    <i class="fas fa-chart-line"></i> Credit Predictor
+                </a>
+                <div class="d-flex gap-3" style="margin-left: auto;">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/project" class="nav-link">Predict</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Hero Section -->
+        <div class="hero-section text-center animate-fade-in">
+            <h1 class="hero-title">About Our Project</h1>
+            <p class="hero-subtitle">Revolutionizing credit assessment with artificial intelligence</p>
+        </div>
+
+        <!-- Mission Section -->
+        <div class="card animate-fade-in">
+            <div class="d-flex gap-3" style="flex-wrap: wrap; align-items: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 class="mb-4"><i class="fas fa-bullseye"></i> Our Mission</h2>
+                    <p class="mb-4">We are committed to democratizing access to credit assessment tools by leveraging the power of machine learning and artificial intelligence. Our goal is to provide accurate, instant, and accessible credit predictions to help individuals make informed financial decisions.</p>
+                    <p>By combining advanced algorithms with comprehensive financial data analysis, we've created a system that can predict credit approval likelihood with remarkable accuracy.</p>
+                </div>
+                <div style="flex: 1; min-width: 300px; text-align: center;">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Section -->
+        <div class="features-grid animate-fade-in">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="feature-title">Machine Learning</h3>
+                <p class="feature-description">Our model uses advanced machine learning algorithms trained on extensive credit data to provide accurate predictions.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="feature-title">Data Analysis</h3>
+                <p class="feature-description">We analyze multiple factors including age, job, education, balance, and financial history to assess creditworthiness.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="feature-title">Privacy First</h3>
+                <p class="feature-description">Your data is never stored and is only used for the current prediction. We prioritize your privacy and security.</p>
+            </div>
+        </div>
+
+        <!-- How It Works Section -->
+        <div class="card animate-fade-in">
+            <h2 class="text-center mb-4"><i class="fas fa-cogs"></i> How Our System Works</h2>
+            <div class="d-flex gap-3" style="flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px; text-align: center;">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>1. Data Collection</h4>
+                    <p>We collect relevant financial and personal information through our secure form interface.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; text-align: center;">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>2. AI Processing</h4>
+                    <p>Our machine learning model analyzes the data using sophisticated algorithms and patterns.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; text-align: center;">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>3. Prediction</h4>
+                    <p>The system generates a credit approval prediction based on the analyzed factors.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px; text-align: center;">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>4. Results</h4>
+                    <p>You receive an instant, clear prediction with detailed explanations and recommendations.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="card animate-fade-in">
+            <h2 class="text-center mb-4"><i class="fas fa-star"></i> Key Features</h2>
+            <div class="d-flex gap-3" style="flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h4><i class="fas fa-bolt"></i> Instant Results</h4>
+                    <p>Get predictions in seconds, not days or weeks.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <h4><i class="fas fa-lock"></i> Secure & Private</h4>
+                    <p>Your data is never stored and is encrypted during processing.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <h4><i class="fas fa-chart-bar"></i> Accurate Predictions</h4>
+                    <p>High accuracy rates based on comprehensive data analysis.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <h4><i class="fas fa-mobile-alt"></i> Mobile Friendly</h4>
+                    <p>Works perfectly on all devices and screen sizes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="card text-center animate-fade-in">
+            <h2 class="mb-4">Ready to Try Our Credit Predictor?</h2>
+            <p class="mb-4">Experience the power of AI-driven credit assessment today</p>
+            <a href="/project" class="btn btn-primary btn-lg">
+                <i class="fas fa-play"></i> Start Prediction
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="main-container">
+            <p>&copy; 2025 Credit Approval Predictor. All rights reserved.</p>
+            <p>Powered by Advanced Machine Learning</p>
+        </div>
+    </footer>
+</body>
+</html>
