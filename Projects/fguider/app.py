@@ -5,10 +5,28 @@ app = Flask(__name__)
 model = joblib.load('model.joblib')
 
 label_dict = {
-    0: 'rice', 1: 'maize', 2: 'wheat', 3: 'cotton', 4: 'barley',
-    5: 'pulses', 6: 'groundnut', 7: 'sugarcane', 8: 'millet',
-    9: 'oilseeds', 10: 'potato', 11: 'onion', 12: 'banana',
-    13: 'tomato', 14: 'grapes', 15: 'apple'
+    0:'apple',
+    1:'banana',
+    2:'blackgram',
+    3:'chickpea',
+    4:'coconut',
+    5:'coffee',
+    6:'cotton',
+    7:'grapes',
+    8:'jute',
+    9:'kidneybeans',
+    10:'lentil',
+    11:'maize',
+    12:'mango',
+    13:'mothbeans',
+    14:'mungbean',
+    15:'muskmelon',
+    16:'orange',
+    17:'papaya',
+    18:'pigeonpeas',
+    19:'pomegranate',
+    20:'rice',
+    21:'watermelon'
 }
 
 @app.route("/")

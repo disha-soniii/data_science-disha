@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load your trained model
-model = joblib.load('model.joblib')  # Save your ML model as pcos_model.joblib
+model = joblib.load('model.joblib')  
 
 @app.route('/')
 def home():

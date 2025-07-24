@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Laptop Price Predictor</title>
+    <title>Insurance Price Predictor</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-image: url("{{ url_for('static', filename='laptop.png') }}");
+            background-image: url("{{ url_for('static', filename='insurance.jpg') }}");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -72,19 +72,18 @@
 <body>
 
 <header>
-    <h1>Laptop Price Predictor</h1>
+    <h1>Insurance Price Predictor</h1>
 </header>
 
 <section>
-    <h2>Predict Your Laptop's Price Instantly</h2>
+    <h2>Predict Your Insurance Premium Instantly</h2>
     <p>
-        Welcome to the Laptop Price Prediction Tool. Just enter your laptop specifications, and we'll estimate its current market price for you!
-        This tool helps buyers and sellers get fair and transparent pricing based on real data.
+        Welcome to the Insurance Price Prediction Tool. Just enter your personal details and lifestyle information, and we’ll instantly predict your insurance premium!
     </p>
 
     <div class="buttonGroup">
         <a href="{{ url_for('predict') }}">
-            <button>Predict Price</button>
+            <button>Predict Insurance Price</button>
         </a>
         <a href="{{ url_for('about') }}">
             <button>About Project</button>
